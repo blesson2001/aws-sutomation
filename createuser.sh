@@ -2,10 +2,4 @@ aws iam create-user --user-name kimo --permissions-boundary arn:aws:iam::aws:pol
 
 aws iam create-access-key --user-name kimo
 
-aws iam create-login-profile --generate-cli-skeleton > cat < create-login-profile.json  <<EOF
-{
-    "UserName": "kimo",
-    "Password": "&0Zflkuwzy",
-    "PasswordResetRequired": false
-}
-EOF
+aws iam create-login-profile --user-name kimo --password '&0Zflkuwzy' --no-password-reset-required
