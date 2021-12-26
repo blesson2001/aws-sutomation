@@ -28,8 +28,8 @@ aws ec2 create-subnet --availability-zone-id use1-az4 --cidr-block 192.168.4.0/2
 
 echo "Second private subnet created...."
 
-SUBNETPUB=$(aws ec2 describe-subnets --filters 'Name=cidr,Values=192.168.1.0/24'|jq -r '.Subnets[].SubnetId')
-SUBPUB=$(aws ec2 describe-subnets --filters 'Name=cidr,Values=192.168.2.0/24'|jq -r '.Subnets[].SubnetId')
+SUBNETPUB=$(aws ec2 describe-subnets --filters 'Name=cidr-block,Values=192.168.1.0/24'|jq -r '.Subnets[].SubnetId')
+SUBPUB=$(aws ec2 describe-subnets --filters 'Name=cidr-block,Values=192.168.2.0/24'|jq -r '.Subnets[].SubnetId')
 
 aws ec2 modify-subnet-attribute --subnet-id $SUBNETPUB --map-public-ip-on-launch
 aws ec2 modify-subnet-attribute --subnet-id $SUBPUB --map-public-ip-on-launch
