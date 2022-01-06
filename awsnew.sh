@@ -67,3 +67,6 @@ echo "Created route for internet gateway...."
 echo "Architecture completed....."
 
 echo "You can create instance now...."
+
+
+echo "You Should try this via terraform as well"
