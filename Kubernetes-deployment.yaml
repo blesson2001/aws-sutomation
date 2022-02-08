@@ -22,8 +22,8 @@ spec:
       labels:
         app: myapp
       annotations:
-        iam.amazonaws.com/role: myapp-iam-role
+        iam.amazonaws.com/role: AdminAccess
     spec:
       containers:
       - name: myapp
-        image: myapp:v1.0
+        image:  blesson2001/python-app:latest
