@@ -41,7 +41,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 
 
-sed -i '/^ExecStart/ s/$/ --exec-opt native.cgroupdriver=systemd/' /usr/lib/systemd/system/docker.service
+sudo sed -i '/^ExecStart/ s/$/ --exec-opt native.cgroupdriver=systemd/' /usr/lib/systemd/system/docker.service
 
 
 sudo systemctl daemon-reload
